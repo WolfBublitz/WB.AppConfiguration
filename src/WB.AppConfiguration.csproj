@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="Exists($(CI))">true</RestoreLockedMode>
+    <ProjectsDir>$(ProjectDir)../../</ProjectsDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WB.CodeAnalyzer" Version="[1.*-*, 2)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="UniversalTypeConverter" Version="2.6.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseProjectReferences)' == 'true'">
+  </ItemGroup>
+
+  <Target Name="Print Build Mode" BeforeTargets="BeforeBuild">
+    <Message Importance="High" Text="Building $(ProjectName) in $(Configuration) mode for $(TargetFramework) with PROJECT references" Condition="'$(UseProjectReferences)' == 'true'" />
+    <Message Importance="High" Text="Building $(ProjectName) in $(Configuration) mode for $(TargetFramework) with PACKAGE references" Condition="'$(UseProjectReferences)' != 'true'" />
+  </Target>
+
+</Project>

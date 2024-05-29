@@ -1,0 +1,323 @@
+SF:/Users/wolf/Coden/WB.AppConfiguration/src/ActionDisposer.cs
+FN:9,System.Void WB.AppConfiguration.ActionDisposer::Dispose()
+FNDA:8,System.Void WB.AppConfiguration.ActionDisposer::Dispose()
+DA:10,8
+DA:11,8
+DA:12,8
+FN:4,System.Void WB.AppConfiguration.ActionDisposer::.ctor(System.Action)
+FNDA:121,System.Void WB.AppConfiguration.ActionDisposer::.ctor(System.Action)
+DA:5,121
+DA:7,121
+LF:5
+LH:5
+BRF:0
+BRH:0
+FNF:2
+FNH:2
+end_of_record
+SF:/Users/wolf/Coden/WB.AppConfiguration/src/ConfigurationCollection.cs
+FN:51,System.Object WB.AppConfiguration.ConfigurationCollection::get_Item(System.Object)
+FNDA:20,System.Object WB.AppConfiguration.ConfigurationCollection::get_Item(System.Object)
+DA:52,20
+DA:53,20
+DA:55,19
+DA:56,15
+DA:57,15
+DA:60,4
+DA:61,4
+DA:63,15
+BRDA:55,24,0,15
+BRDA:55,24,1,4
+FN:73,System.Collections.Generic.IEnumerable`1<System.Object> WB.AppConfiguration.ConfigurationCollection::get_Keys()
+FNDA:9,System.Collections.Generic.IEnumerable`1<System.Object> WB.AppConfiguration.ConfigurationCollection::get_Keys()
+DA:74,9
+FN:97,System.Int32 WB.AppConfiguration.ConfigurationCollection::get_Count()
+FNDA:3,System.Int32 WB.AppConfiguration.ConfigurationCollection::get_Count()
+DA:98,3
+FN:102,System.Collections.Generic.IEnumerable`1<System.Object> WB.AppConfiguration.ConfigurationCollection::get_Layers()
+FNDA:7,System.Collections.Generic.IEnumerable`1<System.Object> WB.AppConfiguration.ConfigurationCollection::get_Layers()
+DA:103,7
+FN:110,System.Boolean WB.AppConfiguration.ConfigurationCollection::ContainsKey(System.Object)
+FNDA:3,System.Boolean WB.AppConfiguration.ConfigurationCollection::ContainsKey(System.Object)
+DA:111,3
+DA:112,3
+DA:114,2
+DA:115,2
+FN:118,System.Boolean WB.AppConfiguration.ConfigurationCollection::TryGetValue(System.Object,System.Object&)
+FNDA:43,System.Boolean WB.AppConfiguration.ConfigurationCollection::TryGetValue(System.Object,System.Object&)
+DA:119,43
+DA:120,43
+DA:121,28
+DA:122,28
+DA:124,28
+DA:127,15
+DA:128,15
+DA:130,15
+DA:132,43
+BRDA:120,17,0,28
+BRDA:120,17,1,15
+FN:145,System.Collections.IEnumerator WB.AppConfiguration.ConfigurationCollection::System.Collections.IEnumerable.GetEnumerator()
+FNDA:1,System.Collections.IEnumerator WB.AppConfiguration.ConfigurationCollection::System.Collections.IEnumerable.GetEnumerator()
+DA:146,1
+FN:155,System.IDisposable WB.AppConfiguration.ConfigurationCollection::Push(System.Object)
+FNDA:55,System.IDisposable WB.AppConfiguration.ConfigurationCollection::Push(System.Object)
+DA:156,55
+DA:157,55
+DA:159,54
+DA:161,54
+DA:162,17
+DA:163,115
+DA:164,32
+DA:167,32
+DA:169,32
+DA:170,32
+DA:171,17
+DA:172,37
+DA:173,1
+DA:174,1
+DA:177,36
+DA:178,180
+DA:179,36
+DA:180,36
+DA:184,36
+DA:186,36
+DA:187,36
+DA:188,36
+DA:190,57
+DA:192,53
+DA:194,53
+DA:195,53
+BRDA:161,72,0,17
+BRDA:163,200,1,32
+BRDA:163,200,0,17
+BRDA:161,72,1,37
+BRDA:172,253,0,1
+BRDA:172,253,1,36
+BRDA:178,403,1,36
+BRDA:178,403,0,36
+FN:202,System.Object WB.AppConfiguration.ConfigurationCollection::Pop()
+FNDA:2,System.Object WB.AppConfiguration.ConfigurationCollection::Pop()
+DA:203,2
+DA:204,2
+DA:205,1
+DA:206,1
+DA:209,1
+DA:211,1
+DA:213,1
+DA:214,1
+BRDA:204,17,0,1
+BRDA:204,17,1,1
+FN:221,System.Void WB.AppConfiguration.ConfigurationCollection::Remove(System.Object)
+FNDA:2,System.Void WB.AppConfiguration.ConfigurationCollection::Remove(System.Object)
+DA:222,2
+DA:223,2
+DA:225,1
+DA:226,1
+FN:231,System.Void WB.AppConfiguration.ConfigurationCollection::AddValueProvider(System.Object,System.Func`1<System.Object>)
+FNDA:68,System.Void WB.AppConfiguration.ConfigurationCollection::AddValueProvider(System.Object,System.Func`1<System.Object>)
+DA:232,68
+DA:233,68
+DA:234,10
+DA:235,10
+DA:236,10
+DA:238,58
+DA:239,58
+DA:240,58
+DA:241,58
+DA:242,68
+BRDA:233,17,0,10
+BRDA:233,17,1,58
+FN:244,System.Action WB.AppConfiguration.ConfigurationCollection::GetRemoveAction(System.Object,System.Func`1<System.Object>)
+FNDA:68,System.Action WB.AppConfiguration.ConfigurationCollection::GetRemoveAction(System.Object,System.Func`1<System.Object>)
+DA:245,68
+DA:246,68
+DA:247,4
+DA:248,4
+DA:249,68
+DA:250,4
+DA:251,3
+DA:252,3
+DA:253,3
+DA:254,72
+DA:255,68
+BRDA:250,67,0,3
+BRDA:250,67,1,4
+FN:28,System.Void WB.AppConfiguration.ConfigurationCollection::.ctor()
+FNDA:50,System.Void WB.AppConfiguration.ConfigurationCollection::.ctor()
+DA:29,50
+DA:31,50
+FN:164,System.Object WB.AppConfiguration.ConfigurationCollection/<>c__DisplayClass16_1::<Push>g__valueProvider|1()
+FNDA:16,System.Object WB.AppConfiguration.ConfigurationCollection/<>c__DisplayClass16_1::<Push>g__valueProvider|1()
+DA:165,16
+FN:181,System.Object WB.AppConfiguration.ConfigurationCollection/<>c__DisplayClass16_2::<Push>g__valueProvider|2()
+FNDA:23,System.Object WB.AppConfiguration.ConfigurationCollection/<>c__DisplayClass16_2::<Push>g__valueProvider|2()
+DA:182,23
+FN:135,System.Boolean WB.AppConfiguration.ConfigurationCollection/<GetEnumerator>d__14::MoveNext()
+FNDA:3,System.Boolean WB.AppConfiguration.ConfigurationCollection/<GetEnumerator>d__14::MoveNext()
+DA:136,3
+DA:137,21
+DA:138,6
+DA:139,6
+DA:141,6
+DA:142,6
+DA:143,3
+BRDA:137,197,1,6
+BRDA:137,197,0,3
+FN:86,System.Boolean WB.AppConfiguration.ConfigurationCollection/<get_Values>d__7::MoveNext()
+FNDA:3,System.Boolean WB.AppConfiguration.ConfigurationCollection/<get_Values>d__7::MoveNext()
+DA:87,3
+DA:88,19
+DA:89,5
+DA:90,5
+DA:92,5
+DA:93,5
+DA:94,3
+BRDA:88,183,1,5
+BRDA:88,183,0,3
+LF:102
+LH:102
+BRF:22
+BRH:22
+FNF:17
+FNH:17
+end_of_record
+SF:/Users/wolf/Coden/WB.AppConfiguration/src/DisposableCollection.cs
+FN:26,System.Void WB.AppConfiguration.DisposableCollection::Add(System.IDisposable)
+FNDA:121,System.Void WB.AppConfiguration.DisposableCollection::Add(System.IDisposable)
+DA:27,121
+DA:28,121
+DA:29,121
+FN:32,System.Void WB.AppConfiguration.DisposableCollection::Dispose()
+FNDA:4,System.Void WB.AppConfiguration.DisposableCollection::Dispose()
+DA:33,4
+DA:34,28
+DA:35,8
+DA:36,8
+DA:37,8
+DA:38,4
+BRDA:34,40,1,8
+BRDA:34,40,0,4
+FN:16,System.Void WB.AppConfiguration.DisposableCollection::.ctor()
+FNDA:54,System.Void WB.AppConfiguration.DisposableCollection::.ctor()
+DA:17,54
+LF:10
+LH:10
+BRF:2
+BRH:2
+FNF:3
+FNH:3
+end_of_record
+SF:/Users/wolf/Coden/WB.AppConfiguration/src/Extensions/ConfigurationExtensions.cs
+FN:42,System.Boolean WB.AppConfiguration.ConfigurationExtensions::TryGetValue(WB.AppConfiguration.ConfigurationCollection,System.String,TValue&)
+FNDA:3,System.Boolean WB.AppConfiguration.ConfigurationExtensions::TryGetValue(WB.AppConfiguration.ConfigurationCollection,System.String,TValue&)
+DA:43,3
+DA:44,3
+DA:46,3
+DA:47,2
+DA:49,2
+DA:50,2
+DA:51,1
+DA:52,1
+DA:53,1
+DA:54,1
+DA:57,1
+DA:60,1
+DA:61,1
+DA:63,1
+DA:65,2
+BRDA:46,24,0,2
+BRDA:46,24,1,1
+FN:91,System.Boolean WB.AppConfiguration.ConfigurationExtensions::TryGetValue(WB.AppConfiguration.ConfigurationCollection,System.String,System.Type,System.Object&)
+FNDA:3,System.Boolean WB.AppConfiguration.ConfigurationExtensions::TryGetValue(WB.AppConfiguration.ConfigurationCollection,System.String,System.Type,System.Object&)
+DA:92,3
+DA:93,3
+DA:95,3
+DA:96,2
+DA:98,2
+DA:99,2
+DA:100,1
+DA:101,1
+DA:102,1
+DA:103,1
+DA:106,1
+DA:109,1
+DA:110,1
+DA:112,1
+DA:114,2
+BRDA:95,24,0,2
+BRDA:95,24,1,1
+FN:126,System.Object WB.AppConfiguration.ConfigurationExtensions::GetValue(WB.AppConfiguration.ConfigurationCollection,System.String)
+FNDA:2,System.Object WB.AppConfiguration.ConfigurationExtensions::GetValue(WB.AppConfiguration.ConfigurationCollection,System.String)
+DA:127,2
+DA:128,2
+DA:130,2
+DA:131,1
+FN:144,System.Object WB.AppConfiguration.ConfigurationExtensions::GetValue(WB.AppConfiguration.ConfigurationCollection,System.String,System.Type)
+FNDA:4,System.Object WB.AppConfiguration.ConfigurationExtensions::GetValue(WB.AppConfiguration.ConfigurationCollection,System.String,System.Type)
+DA:145,4
+DA:146,4
+DA:148,4
+DA:150,3
+DA:151,1
+DA:152,1
+DA:156,2
+DA:157,2
+DA:159,1
+DA:160,1
+DA:161,1
+DA:163,2
+BRDA:150,27,0,1
+BRDA:150,27,1,2
+FN:165,TValue WB.AppConfiguration.ConfigurationExtensions::GetValue(WB.AppConfiguration.ConfigurationCollection,System.String)
+FNDA:4,TValue WB.AppConfiguration.ConfigurationExtensions::GetValue(WB.AppConfiguration.ConfigurationCollection,System.String)
+DA:166,4
+DA:167,4
+DA:169,4
+DA:172,2
+DA:173,2
+DA:175,1
+DA:176,1
+DA:177,1
+DA:179,1
+BRDA:169,21,0,1
+BRDA:169,21,1,2
+FN:182,TTarget WB.AppConfiguration.ConfigurationExtensions::Get(WB.AppConfiguration.ConfigurationCollection)
+FNDA:4,TTarget WB.AppConfiguration.ConfigurationExtensions::Get(WB.AppConfiguration.ConfigurationCollection)
+DA:183,4
+DA:184,4
+DA:186,4
+DA:188,56
+DA:189,15
+DA:190,15
+DA:191,7
+DA:193,7
+DA:194,3
+DA:195,3
+DA:196,3
+DA:200,4
+DA:202,4
+DA:203,4
+DA:204,3
+DA:205,1
+DA:206,1
+DA:207,1
+DA:209,3
+DA:210,6
+DA:211,14
+DA:213,3
+DA:214,3
+BRDA:188,43,0,1
+BRDA:188,43,1,4
+BRDA:188,347,1,15
+BRDA:190,110,0,7
+BRDA:193,137,0,3
+BRDA:193,137,1,4
+BRDA:190,110,1,14
+BRDA:188,347,0,3
+LF:78
+LH:78
+BRF:16
+BRH:16
+FNF:6
+FNH:6
+end_of_record

@@ -1,0 +1,25 @@
+#nullable enable
+WB.AppConfiguration.DisposableCollection
+WB.AppConfiguration.DisposableCollection.Add(System.IDisposable! disposable) -> void
+WB.AppConfiguration.DisposableCollection.DisposableCollection() -> void
+WB.AppConfiguration.DisposableCollection.Dispose() -> void
+static WB.AppConfiguration.ConfigurationExtensions.Get<TTarget>(this WB.AppConfiguration.ConfigurationCollection! this) -> TTarget
+static WB.AppConfiguration.ConfigurationExtensions.GetValue(this WB.AppConfiguration.ConfigurationCollection! this, string! key) -> object?
+static WB.AppConfiguration.ConfigurationExtensions.GetValue(this WB.AppConfiguration.ConfigurationCollection! this, string! key, System.Type! type) -> object?
+static WB.AppConfiguration.ConfigurationExtensions.GetValue<TValue>(this WB.AppConfiguration.ConfigurationCollection! this, string! key) -> TValue
+static WB.AppConfiguration.ConfigurationExtensions.TryGetValue(this WB.AppConfiguration.ConfigurationCollection! this, string! key, System.Type! type, out object? value) -> bool
+static WB.AppConfiguration.ConfigurationExtensions.TryGetValue<TValue>(this WB.AppConfiguration.ConfigurationCollection! this, string! key, out TValue value) -> bool
+WB.AppConfiguration.ConfigurationCollection
+WB.AppConfiguration.ConfigurationCollection.ConfigurationCollection() -> void
+WB.AppConfiguration.ConfigurationCollection.ContainsKey(object! key) -> bool
+WB.AppConfiguration.ConfigurationCollection.Count.get -> int
+WB.AppConfiguration.ConfigurationCollection.GetEnumerator() -> System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<object!, object?>>!
+WB.AppConfiguration.ConfigurationCollection.Keys.get -> System.Collections.Generic.IEnumerable<object!>!
+WB.AppConfiguration.ConfigurationCollection.Layers.get -> System.Collections.Generic.IEnumerable<object!>!
+WB.AppConfiguration.ConfigurationCollection.Pop() -> object!
+WB.AppConfiguration.ConfigurationCollection.Push(object! configurationLayer) -> System.IDisposable!
+WB.AppConfiguration.ConfigurationCollection.Remove(object! configurationLayer) -> void
+WB.AppConfiguration.ConfigurationCollection.this[object! key].get -> object?
+WB.AppConfiguration.ConfigurationCollection.TryGetValue(object! key, out object? value) -> bool
+WB.AppConfiguration.ConfigurationCollection.Values.get -> System.Collections.Generic.IEnumerable<object?>!
+WB.AppConfiguration.ConfigurationExtensions

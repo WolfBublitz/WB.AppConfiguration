@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "ryanluker.vscode-coverage-gutters",
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp"
+    ]
+}

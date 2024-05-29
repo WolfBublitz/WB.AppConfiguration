@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net8.0": {
+      "Microsoft.CodeAnalysis.PublicApiAnalyzers": {
+        "type": "Direct",
+        "requested": "[3.3.4, )",
+        "resolved": "3.3.4",
+        "contentHash": "kNLTfXtXUWDHVt5iaPkkiPuyHYlMgLI6SOFT4w88bfeI2vqSeGgHunFkdvlaCM8RDfcY0t2+jnesQtidRJJ/DA=="
+      },
+      "UniversalTypeConverter": {
+        "type": "Direct",
+        "requested": "[2.6.0, )",
+        "resolved": "2.6.0",
+        "contentHash": "IbUEWNTao2RllNtqcqNqPqkHIMgh0TAxbbXN8/8XEVS++VniQfUMrrrPk3sqT6jQuhz5+BGJYaKLUVBr4aGpUg=="
+      },
+      "WB.CodeAnalyzer": {
+        "type": "Direct",
+        "requested": "[1.*-*, 2.0.0)",
+        "resolved": "1.0.0",
+        "contentHash": "xZFZbensHc825ycCUtZK6IB8qQJykyfsimcFOYPdOYrr20Jo8SmQa4TEPxqpbkfmdNrxV73WCw4x31d4pSHJLg=="
+      }
+    }
+  }
+}
