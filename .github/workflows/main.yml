@@ -1,0 +1,38 @@
+name: Build and Publish
+
+on:
+  push:
+    branches: "*"
+    tags: "*"
+  pull_request:
+    branches: "*"
+  release:
+    types:
+      - created
+
+jobs:
+  BuildNugetPackage:
+    name: Build Nuget Package
+    uses: ./.github/workflows/build-nuget-package.yml
+    with:
+      dotnet-version: 8.0.x
+      configuration: Release
+
+  ConfigurationCollectionTests:
+    name: ConfigurationCollection Tests
+    needs: [BuildNugetPackage]
+    uses: ./.github/workflows/execute-test.yml
+    with:
+      dotnet-version: 8.0.x
+      configuration: Release
+      project-path: ./tests/ConfigurationCollectionTests/src
+
+  PublishToGithub:
+    name: Publish to Github
+    needs: [
+      LogSinkBaseTests,
+    ]
+    uses: ./.github/workflows/publish-to-github.yml
+    with:
+      package-path: ./**/*.nupkg
+    if: github.event_name == 'release' && github.event.action == 'created'
