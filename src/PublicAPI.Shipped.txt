@@ -1,8 +1,4 @@
 #nullable enable
-WB.AppConfiguration.DisposableCollection
-WB.AppConfiguration.DisposableCollection.Add(System.IDisposable! disposable) -> void
-WB.AppConfiguration.DisposableCollection.DisposableCollection() -> void
-WB.AppConfiguration.DisposableCollection.Dispose() -> void
 static WB.AppConfiguration.ConfigurationExtensions.Get<TTarget>(this WB.AppConfiguration.ConfigurationCollection! this) -> TTarget
 static WB.AppConfiguration.ConfigurationExtensions.GetValue(this WB.AppConfiguration.ConfigurationCollection! this, string! key) -> object?
 static WB.AppConfiguration.ConfigurationExtensions.GetValue(this WB.AppConfiguration.ConfigurationCollection! this, string! key, System.Type! type) -> object?
