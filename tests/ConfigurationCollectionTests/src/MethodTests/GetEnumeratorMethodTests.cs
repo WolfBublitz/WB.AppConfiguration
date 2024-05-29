@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.MethodTests.GetEnumeratorMethodTests;
+namespace ConfigurationCollectionTests.MethodTests.GetEnumeratorMethodTests;
 
 [TestClass]
 public class TheGetEnumeratorMethod

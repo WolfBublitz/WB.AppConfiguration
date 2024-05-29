@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.PropertyTests.ValuesPropertyTests;
+namespace ConfigurationCollectionTests.PropertyTests.ValuesPropertyTests;
 
 internal sealed class NoLayerDataAttribute : Attribute, ITestDataSource
 {

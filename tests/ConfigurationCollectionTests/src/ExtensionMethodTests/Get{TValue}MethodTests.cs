@@ -4,7 +4,7 @@ using System.Reflection;
 using TB.ComponentModel;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.ExtensionMethodTests.Get_TValue_MethodTests;
+namespace ConfigurationCollectionTests.ExtensionMethodTests.Get_TValue_MethodTests;
 
 public class TestConfiguration
 {

@@ -2,7 +2,7 @@ using System;
 using TB.ComponentModel;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.ExtensionMethodTests.TryGetValue__key_type__MethodTests;
+namespace ConfigurationCollectionTests.ExtensionMethodTests.TryGetValue__key_type__MethodTests;
 
 [TestClass]
 public class TheTryGetValueMethod

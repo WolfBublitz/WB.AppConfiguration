@@ -1,7 +1,7 @@
 using System;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.MethodTests.PopMethodTests;
+namespace ConfigurationCollectionTests.MethodTests.PopMethodTests;
 
 [TestClass]
 public class ThePopMethod

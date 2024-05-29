@@ -1,7 +1,7 @@
 using System;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.MethodTests.TryGetValueMethodTests;
+namespace ConfigurationCollectionTests.MethodTests.TryGetValueMethodTests;
 
 [TestClass]
 public class TheTryGetValueMethod

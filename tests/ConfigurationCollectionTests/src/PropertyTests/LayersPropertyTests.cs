@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.PropertyTests.CountPropertyTests;
+namespace ConfigurationCollectionTests.PropertyTests.CountPropertyTests;
 
 [TestClass]
 public class TheLayersProperty

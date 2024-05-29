@@ -4,7 +4,7 @@ using System.Reflection;
 using Microsoft.VisualBasic;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.OperatorTests.IndexOperatorGetterTests;
+namespace ConfigurationCollectionTests.OperatorTests.IndexOperatorGetterTests;
 
 internal sealed class OneLayerDataAttribute : Attribute, ITestDataSource
 {

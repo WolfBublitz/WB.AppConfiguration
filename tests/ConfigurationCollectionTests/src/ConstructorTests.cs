@@ -1,4 +1,4 @@
-namespace ConfigurationTests.TheConstructorTests;
+namespace ConfigurationCollectionTests.TheConstructorTests;
 
 [TestClass]
 public class TheConstructor

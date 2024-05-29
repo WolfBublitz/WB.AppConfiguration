@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.MethodTests.PushMethodTests;
+namespace ConfigurationCollectionTests.MethodTests.PushMethodTests;
 
 internal sealed class DictionaryDataTest : Attribute, ITestDataSource
 {

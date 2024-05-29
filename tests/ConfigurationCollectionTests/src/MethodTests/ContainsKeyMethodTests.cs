@@ -1,7 +1,7 @@
 using System;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.MethodTests.ContainsKeyMethodTests;
+namespace ConfigurationCollectionTests.MethodTests.ContainsKeyMethodTests;
 
 [TestClass]
 public class ThePushMethod

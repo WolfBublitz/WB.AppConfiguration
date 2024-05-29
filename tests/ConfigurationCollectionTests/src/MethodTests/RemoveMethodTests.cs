@@ -1,7 +1,7 @@
 using System;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.MethodTests.RemoveMethodTests;
+namespace ConfigurationCollectionTests.MethodTests.RemoveMethodTests;
 
 [TestClass]
 public class TheRemoveMethod

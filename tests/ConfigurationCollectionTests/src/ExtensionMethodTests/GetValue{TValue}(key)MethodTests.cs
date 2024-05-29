@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using WB.AppConfiguration;
 
-namespace ConfigurationTests.ExtensionMethodTests.GetValue_TValue_key_MethodTests;
+namespace ConfigurationCollectionTests.ExtensionMethodTests.GetValue_TValue_key_MethodTests;
 
 [TestClass]
 public class TheGetValueMethod
