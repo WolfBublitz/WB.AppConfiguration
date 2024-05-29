@@ -61,7 +61,7 @@ public class TheValuesProperty
     public void ShouldProvideTheTopMostValues(IEnumerable<object> layers, IEnumerable<object?> values)
     {
         // Arrange
-        ConfigurationCollection configuration = [];
+        Configuration configuration = [];
 
         // Act
         foreach (object layer in layers)

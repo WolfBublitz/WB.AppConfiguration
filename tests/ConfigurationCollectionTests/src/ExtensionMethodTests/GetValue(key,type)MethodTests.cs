@@ -11,7 +11,7 @@ public class TheGetValueMethod
     public void ShouldReturnTheValueCastedToType()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new { Key = "Some Value" });
 
         // Act
@@ -26,7 +26,7 @@ public class TheGetValueMethod
     public void ShouldReturnNullIfTheValueIsNull()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new Dictionary<string, object?> { ["Key"] = null });
 
         // Act
@@ -40,7 +40,7 @@ public class TheGetValueMethod
     public void ShouldThrowKeyNotFoundExceptionIfTheKeyDoesNotExist()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         Action act = () => configuration.GetValue("Key", typeof(string));
@@ -53,7 +53,7 @@ public class TheGetValueMethod
     public void ShouldThrowInvalidCastExceptinIfTheValueCouldNotBeConverted()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new { Key = "Some Value" });
 
         // Act

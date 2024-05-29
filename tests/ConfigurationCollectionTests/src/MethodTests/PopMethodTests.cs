@@ -10,7 +10,7 @@ public class ThePopMethod
     public void ShouldPopTheLastObject()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new { Key1 = "Value 1" });
         configuration.Push(new { Key2 = "Value 2" });
         configuration.Push(new { Key3 = "Value 3" });
@@ -31,7 +31,7 @@ public class ThePopMethod
     public void ShouldThrowInvalidOperationExceptionIfConfigurationIsEmpty()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         Action act = () => configuration.Pop();

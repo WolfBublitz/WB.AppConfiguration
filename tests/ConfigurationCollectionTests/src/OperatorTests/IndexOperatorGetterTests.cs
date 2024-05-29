@@ -53,7 +53,7 @@ public class TheGetterOfTheIndexOperator
     public void ShouldReturnTheTopMonstValueForAKey(IEnumerable<object> layers, string key, object? expectedValue)
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         foreach (object layer in layers)
         {
@@ -71,7 +71,7 @@ public class TheGetterOfTheIndexOperator
     public void ShouldThrowArgumentNullExceptionIfKeyIsNull()
     {
         // Arrange
-        ConfigurationCollection configuration = [];
+        Configuration configuration = [];
 
         // Act
         Action action = () =>
@@ -87,7 +87,7 @@ public class TheGetterOfTheIndexOperator
     public void ShouldThrowKeyNotFoundExceptionWhenKeyIsNotFound()
     {
         // Arrange
-        ConfigurationCollection configuration = [];
+        Configuration configuration = [];
 
         // Act
         Action action = () =>

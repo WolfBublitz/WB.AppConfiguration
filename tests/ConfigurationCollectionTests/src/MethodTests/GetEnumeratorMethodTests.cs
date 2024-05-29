@@ -12,7 +12,7 @@ public class TheGetEnumeratorMethod
     public void ShouldProvideAnEnumerator()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new { Key1 = "Value 1" });
         configuration.Push(new { Key2 = "Value 2" });
         configuration.Push(new { Key3 = "Value 3" });
@@ -39,7 +39,7 @@ public class TheGetEnumeratorMethod
     public void ShouldProvideAnEnumeratorAsIEnumerable()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new { Key1 = "Value 1" });
         configuration.Push(new { Key2 = "Value 2" });
         configuration.Push(new { Key3 = "Value 3" });

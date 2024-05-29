@@ -122,7 +122,7 @@ public class TheGetMethod
     public void ShouldReturnTheConfigurationValue(IEnumerable<object> layers, TestConfiguration expectedConfiguration)
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new { Key = "Some Value" });
 
         foreach (object layer in layers)
@@ -141,7 +141,7 @@ public class TheGetMethod
     public void ShouldThrowInvalidCastExceptionIfTheValueCouldNotBeConverted()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new { BoolProperty = "Some Value" });
 
         // Act

@@ -10,7 +10,7 @@ public class TheRemoveMethod
     public void ShouldRemoveTheLayer()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         object layer1 = new { Key1 = "Value 1" };
         object layer2 = new { Key2 = "Value 2" };
         object layer3 = new { Key3 = "Value 3" };
@@ -34,7 +34,7 @@ public class TheRemoveMethod
     public void ShouldThrowArgumentNullExceptionIfLayerIsNull()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         Action act = () => configuration.Remove(null!);

@@ -65,7 +65,7 @@ public class TheKeysProperty
     public void ShouldCountTheNumberOfKeys(IEnumerable<object> layers, int expectedCount)
     {
         // Arrange
-        ConfigurationCollection configuration = [];
+        Configuration configuration = [];
 
         // Act
         foreach (object layer in layers)

@@ -11,7 +11,7 @@ public class TheTryGetValueMethod
     public void ShouldDeliverTheValueAndReturnTrueIfTheValueExists()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new { Key = "Some Value" });
 
         // Act
@@ -26,7 +26,7 @@ public class TheTryGetValueMethod
     public void ShouldDeliverNullAndReturnFalseIfTheValueDoesNotExist()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         bool result = configuration.TryGetValue("Key", typeof(string), out object? value);
@@ -40,7 +40,7 @@ public class TheTryGetValueMethod
     public void ShouldThrowInvalidCastExceptionIfTheValueCouldNotBeConverted()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         configuration.Push(new { Key = "Some Value" });
 
         // Act

@@ -10,7 +10,7 @@ public class ThePushMethod
     public void ShouldPushOnObject()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Assert
         configuration.Should().NotContainKey("Key");
@@ -26,7 +26,7 @@ public class ThePushMethod
     public void ShouldThrowArgumentNullExceptionIfKeyIsNull()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         Action act = () => configuration.ContainsKey(null!);

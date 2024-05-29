@@ -7,9 +7,9 @@ using TB.ComponentModel;
 namespace WB.AppConfiguration;
 
 /// <summary>
-/// Provides extension methods for the <see cref="ConfigurationCollection"/> class.
+/// Provides extension methods for the <see cref="Configuration"/> class.
 /// </summary>
-public static class ConfigurationExtensions
+public static class IConfigurationExtensions
 {
     // ┌────────────────────────────────────────────────────────────────────────────────┐
     // │ Public Methods                                                                 │
@@ -38,8 +38,8 @@ public static class ConfigurationExtensions
     /// </returns>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="this"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidCastException">Thrown when the value for the <paramref name="key"/> could not be converted to the target type <typeparamref name="TValue"/>.</exception>
-    /// <seealso cref="TryGetValue(ConfigurationCollection, string, Type, out object?)"/>
-    public static bool TryGetValue<TValue>(this ConfigurationCollection @this, string key, out TValue value)
+    /// <seealso cref="TryGetValue(IConfiguration, string, Type, out object?)"/>
+    public static bool TryGetValue<TValue>(this IConfiguration @this, string key, out TValue value)
     {
         ArgumentNullException.ThrowIfNull(@this, nameof(@this));
 
@@ -87,8 +87,8 @@ public static class ConfigurationExtensions
     /// </returns>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="this"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidCastException">Thrown when the value for the <paramref name="key"/> could not be converted to the target type <paramref name="type"/>.</exception>
-    /// <seealso cref="TryGetValue{TValue}(ConfigurationCollection, string, out TValue)"/>
-    public static bool TryGetValue(this ConfigurationCollection @this, string key, Type type, out object? value)
+    /// <seealso cref="TryGetValue{TValue}(IConfiguration, string, out TValue)"/>
+    public static bool TryGetValue(this IConfiguration @this, string key, Type type, out object? value)
     {
         ArgumentNullException.ThrowIfNull(@this, nameof(@this));
 
@@ -121,9 +121,9 @@ public static class ConfigurationExtensions
     /// <returns>The value associated with the specified <paramref name="key"/>.</returns>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="this"/> is <see langword="null"/>.</exception>
     /// <exception cref="KeyNotFoundException">Thrown when the <paramref name="key"/> is not found in the configuration.</exception>
-    /// <seealso cref="GetValue(ConfigurationCollection, string, Type)"/>
-    /// <seealso cref="GetValue{TValue}(ConfigurationCollection, string)"/>
-    public static object? GetValue(this ConfigurationCollection @this, string key)
+    /// <seealso cref="GetValue(IConfiguration, string, Type)"/>
+    /// <seealso cref="GetValue{TValue}(IConfiguration, string)"/>
+    public static object? GetValue(this IConfiguration @this, string key)
     {
         ArgumentNullException.ThrowIfNull(@this, nameof(@this));
 
@@ -139,9 +139,9 @@ public static class ConfigurationExtensions
     /// <returns>The value associated with the specified <paramref name="key"/>.</returns>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="this"/> is <see langword="null"/>.</exception>
     /// <exception cref="KeyNotFoundException">Thrown when the <paramref name="key"/> is not found in the configuration.</exception>
-    /// <seealso cref="GetValue(ConfigurationCollection, string, Type)"/>
-    /// <seealso cref="GetValue{TValue}(ConfigurationCollection, string)"/>
-    public static object? GetValue(this ConfigurationCollection @this, string key, Type type)
+    /// <seealso cref="GetValue(IConfiguration, string, Type)"/>
+    /// <seealso cref="GetValue{TValue}(IConfiguration, string)"/>
+    public static object? GetValue(this IConfiguration @this, string key, Type type)
     {
         ArgumentNullException.ThrowIfNull(@this, nameof(@this));
 
@@ -171,9 +171,9 @@ public static class ConfigurationExtensions
     /// <returns>The value associated with the specified <paramref name="key"/>.</returns>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="this"/> is <see langword="null"/>.</exception>
     /// <exception cref="KeyNotFoundException">Thrown when the <paramref name="key"/> is not found in the configuration.</exception>
-    /// <seealso cref="GetValue(ConfigurationCollection, string, Type)"/>
-    /// <seealso cref="GetValue{TValue}(ConfigurationCollection, string)"/>
-    public static TValue GetValue<TValue>(this ConfigurationCollection @this, string key)
+    /// <seealso cref="GetValue(IConfiguration, string, Type)"/>
+    /// <seealso cref="GetValue{TValue}(IConfiguration, string)"/>
+    public static TValue GetValue<TValue>(this IConfiguration @this, string key)
     {
         ArgumentNullException.ThrowIfNull(@this, nameof(@this));
 
@@ -190,22 +190,22 @@ public static class ConfigurationExtensions
     }
 
     /// <summary>
-    /// Gets a new instance of <typeparamref name="TTarget"/> populated with the values from the <see cref="ConfigurationCollection"/>.
+    /// Gets a new instance of <typeparamref name="TTarget"/> populated with the values from the <see cref="Configuration"/>.
     /// </summary>
     /// <remarks>
     /// <para>
     /// This method creates a new instance of <typeparamref name="TTarget"/> and populates all public writable properties
-    /// with the values from the <see cref="ConfigurationCollection"/>. If the property type does not match the value type
-    /// in the <see cref="ConfigurationCollection"/> the value is converted.
+    /// with the values from the <see cref="IConfiguration"/>. If the property type does not match the value type
+    /// in the <see cref="Configuration"/> the value is converted.
     /// An <see cref="InvalidCastException"/> is thrown if the value could not be converted.
     /// </para>
     /// </remarks>
     /// <typeparam name="TTarget">The type of the target object to get.</typeparam>
     /// <param name="this">The configuration to get the values from.</param>
-    /// <returns>A new instance of <typeparamref name="TTarget"/> populated with the values from the <see cref="ConfigurationCollection"/>.</returns>
+    /// <returns>A new instance of <typeparamref name="TTarget"/> populated with the values from the <see cref="Configuration"/>.</returns>
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="this"/> is <see langword="null"/>.</exception>
     /// <exception cref="InvalidCastException">Thrown when a value could not be converted to the target type.</exception>
-    public static TTarget Get<TTarget>(this ConfigurationCollection @this)
+    public static TTarget Get<TTarget>(this IConfiguration @this)
         where TTarget : new()
     {
         ArgumentNullException.ThrowIfNull(@this, nameof(@this));

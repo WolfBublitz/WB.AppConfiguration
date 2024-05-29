@@ -8,7 +8,7 @@ using System.Reflection;
 namespace WB.AppConfiguration
 {
     /// <summary>
-    /// A collection of configurations oranized in layers and accessible by key.
+    /// A layered configuration.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -21,7 +21,7 @@ namespace WB.AppConfiguration
     /// If there are layers with the same key, the value of the top-most layer is returned.
     /// </para>
     /// </remarks>
-    public sealed class ConfigurationCollection : IReadOnlyDictionary<object, object?>
+    public sealed class Configuration : IConfiguration
     {
         // ┌────────────────────────────────────────────────────────────────────────────────┐
         // │ Private Fields                                                                 │
@@ -31,7 +31,7 @@ namespace WB.AppConfiguration
         private readonly Dictionary<object, List<Func<object?>>> valueProviders = [];
 
         // ┌────────────────────────────────────────────────────────────────────────────────┐
-        // │ Public Properties                                                              │
+        // │ Public Indexers                                                                │
         // └────────────────────────────────────────────────────────────────────────────────┘
 
         /// <summary>
@@ -63,8 +63,12 @@ namespace WB.AppConfiguration
             }
         }
 
+        // ┌────────────────────────────────────────────────────────────────────────────────┐
+        // │ Public Properties                                                              │
+        // └────────────────────────────────────────────────────────────────────────────────┘
+
         /// <summary>
-        /// Gets the keys the distinct set of keys in the <see cref="ConfigurationCollection"/> over all layers.
+        /// Gets the keys the distinct set of keys in the <see cref="Configuration"/> over all layers.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -74,7 +78,7 @@ namespace WB.AppConfiguration
         public IEnumerable<object> Keys => valueProviders.Keys;
 
         /// <summary>
-        /// Gets the top-level values in the <see cref="ConfigurationCollection"/> for all keys.
+        /// Gets the top-level values in the <see cref="Configuration"/> for all keys.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -145,11 +149,7 @@ namespace WB.AppConfiguration
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        /// <summary>
-        /// Pushes the <paramref name="configurationLayer"/> onto the configuration.
-        /// </summary>
-        /// <param name="configurationLayer">The configuration layer to push onto the configuration.</param>
-        /// <returns>A disposable that pops the <paramref name="configurationLayer"/> from the configuration.</returns>
+        /// <inheritdoc/>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="configurationLayer"/> is <see langword="null"/>.</exception>
         /// <exception cref="NotSupportedException">Thrown when the <paramref name="configurationLayer"/> is a <see cref="IList"/>.</exception>
         public IDisposable Push(object configurationLayer)
@@ -194,10 +194,7 @@ namespace WB.AppConfiguration
             return disposableCollection;
         }
 
-        /// <summary>
-        /// Pops and returns the top-most layer from the configuration.
-        /// </summary>
-        /// <returns>The top-most layer from the configuration.</returns>
+        /// <inheritdoc/>
         /// <exception cref="InvalidOperationException">Thrown when the configuration is empty.</exception>
         public object Pop()
         {
@@ -213,10 +210,7 @@ namespace WB.AppConfiguration
             return topLayer.Key;
         }
 
-        /// <summary>
-        /// Removes the <paramref name="configurationLayer"/> from the configuration.
-        /// </summary>
-        /// <param name="configurationLayer">The configuration layer to remove from the configuration.</param>
+        /// <inheritdoc/>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="configurationLayer"/> is <see langword="null"/>.</exception>
         public void Remove(object configurationLayer)
         {

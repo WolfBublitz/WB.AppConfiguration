@@ -43,7 +43,7 @@ public class ThePushMethod
     public void ShouldPushOnObject(object @object)
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         configuration.Push(@object);
@@ -56,7 +56,7 @@ public class ThePushMethod
     public void ShouldThrowArgumentNullExceptionIfObjectIsNull()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         Action act = () => configuration.Push(null!);
@@ -70,7 +70,7 @@ public class ThePushMethod
     public void ShouldThrowNotSupportedExeptionIfLayerIsAnIList()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         Action act = () => configuration.Push(new List<int>());
@@ -84,7 +84,7 @@ public class ThePushMethod
     public void ShouldReturnAnIDisposable()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         IDisposable disposable = configuration.Push(new { Key1 = "Value1" });
@@ -97,7 +97,7 @@ public class ThePushMethod
     public void ShouldReturnAnIDisposableThatRemovesTheLayerOnDispose()
     {
         // Arrange
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         IDisposable disposable1 = configuration.Push(new { Key1 = "Value1" });

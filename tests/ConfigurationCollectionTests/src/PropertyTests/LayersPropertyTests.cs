@@ -12,7 +12,7 @@ public class TheLayersProperty
     public void ShouldBeEmptyAtDefault()
     {
         // Assert
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
 
         // Act
         IEnumerable<object> layers = configuration.Layers;
@@ -25,7 +25,7 @@ public class TheLayersProperty
     public void ShouldProvideTheListOfPushedLayers()
     {
         // Assert
-        ConfigurationCollection configuration = new();
+        Configuration configuration = new();
         object layer1 = new { Key = "Value" };
         object layer2 = new { Key = "Another Value" };
 

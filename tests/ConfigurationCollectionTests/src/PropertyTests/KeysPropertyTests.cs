@@ -62,7 +62,7 @@ public class TheKeysProperty
     public void ShouldProvideTheDistnictSetOfKeys(IEnumerable<object> layers, IEnumerable<object?> keys)
     {
         // Arrange
-        ConfigurationCollection configuration = [];
+        Configuration configuration = [];
 
         // Act
         foreach (object layer in layers)
