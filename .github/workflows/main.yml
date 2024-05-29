@@ -30,7 +30,7 @@ jobs:
   PublishToGithub:
     name: Publish to Github
     needs: [
-      LogSinkBaseTests,
+      ConfigurationCollectionTests,
     ]
     uses: ./.github/workflows/publish-to-github.yml
     with:
